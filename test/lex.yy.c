@@ -645,9 +645,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 7 "test.l"
+#line 9 "test.l"
 
-#line 651 "lex.yy.c"
+
+#line 652 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -732,26 +733,26 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "test.l"
-{words ++; chars += yyleng; }
+#line 11 "test.l"
+{words++; chars += yyleng;}
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 9 "test.l"
+#line 12 "test.l"
 {chars++; lines ++;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 10 "test.l"
+#line 13 "test.l"
 {chars++;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 11 "test.l"
+#line 15 "test.l"
 ECHO;
 	YY_BREAK
-#line 755 "lex.yy.c"
+#line 756 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1749,7 +1750,8 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 11 "test.l"
+#line 15 "test.l"
+
 
 
 int main(int argc, char** argv) {
@@ -1763,6 +1765,7 @@ int main(int argc, char** argv) {
     printf("lines are %d words are %d chars are %d\n", lines, words, chars);
     return 0;
 }
+
 int yywrap() {
     return 1;
 }
